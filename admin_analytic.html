@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,9 +16,20 @@
             margin-right:0;
         }
         #sidebar-container {
-            min-height: 68vh;   
+            min-height: 150vh;   
             background-color: #0049B5;
             padding: 0;
+        }
+
+        #cancel {
+            margin-right: 0 !important;
+            padding-left: 22px;
+            margin-bottom: 10px;
+            border-top: none;
+        }
+
+        .fa-times {
+            color: white;
         }
 
         /* Sidebar sizes when expanded and expanded */
@@ -104,7 +114,7 @@ background-color: #F5F5F5; }
 
 .scrollbar-primary::-webkit-scrollbar-thumb {
 border-radius: 10px;
--webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+--webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
 background-color: #4285F4; }
 
 
@@ -142,17 +152,6 @@ background-color: #4285F4; }
     border-bottom: 2px solid #1A73E8;
     padding: 0.3rem;
 }
-
-#cancel {
-    margin-right: 0 !important;
-    padding-left: 22px;
-    margin-bottom: 10px;
-}
-
-.fa-times {
-    color: white;
-}
-
 
 .analytics {
     border-bottom: 2px solid #1A73E8;
@@ -273,7 +272,7 @@ background-color: #4285F4; }
 
 .list2 h4 {
     color: #777777;
-    background-color: #fdfdfd;
+    background-color: #f6f6f6;
     padding: 0.4rem;
     margin-top: -1.4rem;
     margin-bottom: 0.5rem;
@@ -311,10 +310,12 @@ background-color: #4285F4; }
     margin-right: 2rem;
 }
 
-@media only screen and (max-width: 700px) {
+
+  
+@media only screen and (max-width: 600px) {
 
     #sidebar-container {
-            min-height: 260vh;   
+            min-height: 290vh;   
             background-color: #0049B5;
             padding: 0;
 
@@ -381,7 +382,7 @@ background-color: #4285F4; }
 
 .top-headings {
     margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -417,24 +418,25 @@ background-color: #4285F4; }
 
 .sect {
     margin: 3rem 0rem;
-   width: 100%;
-
-   
+   width: 100%; 
 }
 
 .charts {
-    display: flex;
-    flex-direction: column;
-    margin: 290px auto;
-    
+    box-sizing:content-box;
+   display: flex;
+   flex-direction: column;
+   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+   height: 460px;
+   background-color:#fff;
+   margin: 28px auto;
 
- 
 }
 
 .pie {
-    margin-top:50px;
+    margin-top:5px;
     background-color: #fff;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    flex:1;
     
    
 }
@@ -443,6 +445,7 @@ background-color: #4285F4; }
     background-color: #fff;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
     margin-top:5px; 
+    flex: 1;
    
 
 }
@@ -481,25 +484,20 @@ background-color: #4285F4; }
     margin-top: 1rem;
 }
 
-.map1{
-    margin-left: 0.5rem;
-}
-
 
 .list2 {
-    margin-top: 0.9rem auto;
     background-color: #fff;
-    height: 270px;
-    width: 90%;
+    height: 210%;
     padding: 1rem;
     position: relative;
     border: 1px solid rgba(119, 119, 119, 0.2);
-    
+    margin: 10px auto;
+    height:300px; 
 }
 
 .list2 h4 {
     color: #777777;
-    background-color: #fdfdfd;
+    background-color: #f6f6f6;
     padding: 0.4rem;
     margin-top: -1.4rem;
     margin-bottom: 0.5rem;
@@ -509,15 +507,12 @@ background-color: #4285F4; }
     border-bottom: 1px solid rgba(119, 119, 119, 0.2);
 }
 
-.list>ul{
-    height:50px;
-}
 .list2 li {
     list-style-type: none;
     padding: 0.5rem;
     width: 122%;
     margin-left: -3.5rem;
-    margin-bottom:0.7rem;   
+    margin-bottom:0.7rem;  
 }
 
 .first-list {
@@ -542,7 +537,7 @@ background-color: #4285F4; }
     </style>
 </head>
 <body>
-      <div class="container-fluid p-0" style="background-color: #F6F6F6;">
+    <div class="container-fluid p-0" style="background-color: #F6F6F6;">
         <div class="row " id="body-row">
             <div id="sidebar-container" class="sidebar">
                 <ul class="list-group">
@@ -550,7 +545,7 @@ background-color: #4285F4; }
                         class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
                     </li>
                     <div id="cancel" data-toggle="sidebar-container" class="fa mr-3 text-muted"
-                    style="font-size: 26px; cursor: pointer;"><i class="fas fa-times"></i></div>
+                        style="font-size: 26px; cursor: pointer;"><i class="fas fa-times"></i></div>
                     <a href="#" data-toggle="sidebar-colapse"
                         class=" list-group-item list-group-item-action d-flex align-items-center border-0 menu-hover"
                         style="background-color: #0049B5">
@@ -559,7 +554,7 @@ background-color: #4285F4; }
                             <span id="collapse-text" class="menu-collapsed">Menu</span>
                         </div>
                     </a>
-                    <a href="index.html"
+                    <a href="desktop8.html"
                         class="d-flex w-100 justify-content-start align-items-center  list-group-item list-group-item-action border-0 flex-column align-items-start menu-hover dashboard-background"
                         style="background-color: #0049B5">
                         <span class="mr-auto">
@@ -570,7 +565,7 @@ background-color: #4285F4; }
                             <span class="submenu-icon ml-auto"></span>
                         </span>
                     </a>
-                    <a href="mailSupport.html"
+                    <a href="mail_support.html"
                         class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start menu-hover"
                         style="background-color: #0049B5">
                         <span class="mr-auto">
@@ -581,7 +576,7 @@ background-color: #4285F4; }
                             <span class="submenu-icon ml-auto"></span>
                         </span>
                     </a>
-                    <a href="car-park-users.html"
+                    <a href="users.html"
                         class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start menu-hover"
                         style="background-color: #0049B5">
                         <span class="mr-auto">
@@ -591,7 +586,7 @@ background-color: #4285F4; }
                             <span class="submenu-icon ml-auto"></span>
                         </span>
                     </a>
-                    <a href="add-account.html"
+                    <a href="settings_account.html"
                         class="d-flex w-100 justify-content-start align-items-center list-group-item list-group-item-action border-0 flex-column align-items-start menu-hover"
                         style="background-color: #0049B5">
                         <span class="mr-auto">
@@ -606,7 +601,7 @@ background-color: #4285F4; }
             </div>
             <!--For main content area -->
             <div class="col p-0 w-25 choose">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: white !important;">
                     <div class="d-flex">
                         <span id="collapse-menu" data-toggle="sidebar-container" class="fa mr-3 text-muted"
                             style="font-size: 22px; cursor: pointer;"></span>
@@ -636,13 +631,12 @@ background-color: #4285F4; }
                         </div>
                     </div>
                 </nav>
-                <div class="col main p-3 text-white" style="background:#1A73E8;">
-                    <div class="col">
-                        <h1 style="font-size: 35px">Welcome back Admin</h1>
-                        <h6 class="pt-2">CAR PARK APPLICATION </h6>
+                <div class="col main p-3 text-white" style="background:#1A73E8; height: auto; padding-top: 25px !important; padding-bottom: 21px !important; padding-left: 20px;">
+                    <div class="col" style="height: 100%; padding-left: 0;">
+                        <h1 style="font-size: 45px; line-height: 53px; font-weight: normal;">Welcome back Admin</h1> 
+                        <h6 class="pt-2" style="font-weight: bold; font-size: 20px; line-height: 23px; padding-top: 14px !important;">CAR PARK APPLICATION </h6>
                     </div>
                 </div>
-
                 <!-- <div class="col mt-2 p-3">
 
             </div>                       -->
